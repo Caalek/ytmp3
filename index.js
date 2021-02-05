@@ -27,7 +27,7 @@ convertBtn.onmousedown = () => {
           } else {
             resultDiv.style.display = 'flex'
             videoTitle.innerHTML = data['title']
-            downloadLink.href = `https://ytmp3.calek.repl.co/dl/${data['video_id']}`
+            downloadLink.href = `https://ytmp3.calek.repl.co/download/${data['filename']}`
           }
       })
 }
