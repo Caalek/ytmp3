@@ -3,18 +3,28 @@ const reloadBtn = document.getElementById('reload-btn')
 const resultDiv = document.getElementById('result-div')
 const downloadLink = document.getElementById('download-link')
 const videoTitle = document.getElementById('video-title')
+const link = document.getElementById('link-input')
+const loading = document.getElementById('loading-div')
 
 let choice = 1
 
-document.getElementById('choice1').onclick = () => {choice = 1}
-document.getElementById('choice2').onclick = () => {choice = 2}
-document.getElementById('choice3').onclick = () => {choice = 3}
+document.getElementById('choice1').onclick = () => {
+  choice = 1
+  link.placeholder = 'Convert YouTube to MP3'
+}
+document.getElementById('choice2').onclick = () => {
+  choice = 2
+  link.placeholder = 'Convert YouTube to MP3 playlist'
+}
+document.getElementById('choice3').onclick = () => {
+  choice = 3
+  link.placeholder = 'Convert YouTube to MP4'
+}
 
 reloadBtn.onclick = () => {location = location}
 
 convertBtn.onclick = () => {
-    const link = document.getElementById('link-input').value
-    const loading = document.getElementById('loading-div')
+    link = link.value
     loading.style.display = 'flex'
     resultDiv.style.display = 'none'
     downloadLink.style.display = 'inline'
