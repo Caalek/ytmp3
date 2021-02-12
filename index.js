@@ -24,7 +24,6 @@ document.getElementById('choice3').onclick = () => {
 reloadBtn.onclick = () => {location = location}
 
 convertBtn.onclick = () => {
-    link = link.value
     loading.style.display = 'flex'
     resultDiv.style.display = 'none'
     downloadLink.style.display = 'inline'
@@ -39,7 +38,7 @@ convertBtn.onclick = () => {
       endpoint = 'convert-mp4'
     }
 
-    postData(`https://ytmp3.calek.repl.co/${endpoint}`, {link: link})
+    postData(`https://ytmp3.calek.repl.co/${endpoint}`, {link: link.value})
       .then(data => {
           loading.style.display = 'none'
           if (data['message'] === 'error') {
