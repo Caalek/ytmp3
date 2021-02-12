@@ -8,6 +8,7 @@ let choice = 1
 
 document.getElementById('choice1').onclick = () => {choice = 1}
 document.getElementById('choice2').onclick = () => {choice = 2}
+document.getElementById('choice3').onclick = () => {choice = 3}
 
 reloadBtn.onclick = () => {location = location}
 
@@ -23,6 +24,8 @@ convertBtn.onclick = () => {
     if (choice === 1) {
       endpoint = 'convert-mp3'
     } else if (choice === 2) {
+      endpoint = 'convert-mp3-playlist'
+    } else if (choice === 3) {
       endpoint = 'convert-mp4'
     }
 
